@@ -145,7 +145,7 @@ namespace CloudBoilerplateNet.Services
             var dependencies = dependencyListFactory(dependencyListValue) ?? new List<IdentifierSet>();
 
             // Restart entries' expiration period each time they're requested.
-            var entryOptions = new MemoryCacheEntryOptions().SetSlidingExpiration(TimeSpan.FromSeconds(CacheExpirySeconds));
+            var entryOptions = new MemoryCacheEntryOptions().SetAbsoluteExpiration(TimeSpan.FromSeconds(CacheExpirySeconds));
 
             // Dummy entries never expire.
             var dummyOptions = new MemoryCacheEntryOptions().SetPriority(CacheItemPriority.NeverRemove);
