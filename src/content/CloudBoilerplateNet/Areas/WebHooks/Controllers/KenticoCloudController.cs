@@ -29,16 +29,16 @@ namespace CloudBoilerplateNet.Areas.WebHooks.Controllers
                 case KenticoCloudCacheHelper.CONTENT_ITEM_SINGLE_IDENTIFIER:
                 case KenticoCloudCacheHelper.CONTENT_ITEM_VARIANT_SINGLE_IDENTIFIER:
                 case KenticoCloudCacheHelper.CONTENT_TYPE_SINGLE_IDENTIFIER:
-                    return RaiseNotificationForSupportedOperations(model.Message.Operation, model.Message.Type, model.Data.Items);
+                    return RaiseNotificationForSupportedOperations(model.Message.Operation, model.Message.Type, model.Data.Items, model.Message.CreatedTimestamp);
                 case KenticoCloudCacheHelper.TAXONOMY_GROUP_SINGLE_IDENTIFIER:
-                    return RaiseNotificationForSupportedOperations(model.Message.Operation, model.Message.Type, model.Data.Taxonomies);
+                    return RaiseNotificationForSupportedOperations(model.Message.Operation, model.Message.Type, model.Data.Taxonomies, model.Message.CreatedTimestamp);
                 default:
                     // For all other types of artifacts, return OK to avoid webhook re-submissions.
                     return Ok();
             }
         }
 
-        private IActionResult RaiseNotificationForSupportedOperations(string operation, string artefactType, IEnumerable<ICodenamedData> data)
+        private IActionResult RaiseNotificationForSupportedOperations(string operation, string artefactType, IEnumerable<ICodenamedData> data, DateTime createdTimestamp)
         {
             foreach (var item in data)
             {
@@ -49,7 +49,8 @@ namespace CloudBoilerplateNet.Areas.WebHooks.Controllers
                     {
                         Type = artefactType,
                         Codename = item.Codename
-                    });
+                    },
+                    createdTimestamp);
             }
 
             return Ok();

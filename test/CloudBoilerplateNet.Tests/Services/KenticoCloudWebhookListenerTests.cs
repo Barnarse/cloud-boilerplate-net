@@ -34,7 +34,7 @@ namespace CloudBoilerplateNet.Tests.Services
             }
 
             var listener = new WebhookListener();
-            Assert.Throws<ArgumentNullException>(() => listener.RaiseWebhookNotification(sender, "upsert", identifierSet));
+            Assert.Throws<ArgumentNullException>(() => listener.RaiseWebhookNotification(sender, "upsert", identifierSet, DateTime.Now));
         }
     }
 }

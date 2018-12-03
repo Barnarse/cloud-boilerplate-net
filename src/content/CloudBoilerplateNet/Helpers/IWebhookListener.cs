@@ -20,6 +20,7 @@ namespace CloudBoilerplateNet.Helpers
         /// <param name="sender">Initiator of the invocation.</param>
         /// <param name="operation">Codename of the remote operation being advertised through the webhook call.</param>
         /// <param name="identifierSet">Identifiers of the data being processed by the <paramref name="operation"/>.</param>
-        void RaiseWebhookNotification(object sender, string operation, IdentifierSet identifierSet);
+        /// <param name="createdTimestamp">Timestamp of the webhook notification.</param>
+        void RaiseWebhookNotification(object sender, string operation, IdentifierSet identifierSet, DateTime createdTimestamp);
     }
 }

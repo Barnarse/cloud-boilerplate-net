@@ -54,7 +54,7 @@ namespace CloudBoilerplateNet.Services
 
         #region "Constructors"
 
-        public ReactiveCacheManager(IOptions<ProjectOptions> projectOptions, IMemoryCache memoryCache, IDependentTypesResolver relatedTypesResolver, IWebhookListener webhookListener)
+        public ReactiveCacheManager(IOptions<ProjectOptions> projectOptions, IMemoryCache memoryCache, IDependentTypesResolver relatedTypesResolver, IWebhookListener webhookListener, IEqualityComparer<WebhookNotificationEventArgs> consecutiveNotificationComparer)
         {
             CacheExpirySeconds = projectOptions?.Value?.CacheTimeoutSeconds ?? throw new ArgumentNullException(nameof(projectOptions));
             MemoryCache = memoryCache ?? throw new ArgumentNullException(nameof(memoryCache));
@@ -63,8 +63,7 @@ namespace CloudBoilerplateNet.Services
             WebhookObservableFactory
                 .GetObservable(webhookListener, nameof(webhookListener.WebhookNotification))
                 .Where(args => InvalidatingOperations.Any(operation => operation.Equals(args.Operation, StringComparison.Ordinal)))
-                .Throttle(TimeSpan.FromSeconds(1))
-                .DistinctUntilChanged()
+                .DistinctUntilChanged(consecutiveNotificationComparer)
                 .Subscribe((args) => InvalidateEntry(args.IdentifierSet));
         }
 

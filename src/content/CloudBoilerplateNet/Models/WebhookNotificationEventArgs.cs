@@ -9,13 +9,15 @@ namespace CloudBoilerplateNet.Models
     {
         public IdentifierSet IdentifierSet { get; }
         public string Operation { get; }
+        public DateTime CreatedTimestamp { get; }
 
-        public WebhookNotificationEventArgs(IdentifierSet identifierSet, string operation)
+        public WebhookNotificationEventArgs(IdentifierSet identifierSet, string operation, DateTime createdTimestamp)
         {
             if (identifierSet != null && !string.IsNullOrEmpty(operation))
             {
                 IdentifierSet = identifierSet;
                 Operation = operation;
+                CreatedTimestamp = createdTimestamp;
             }
         }
 

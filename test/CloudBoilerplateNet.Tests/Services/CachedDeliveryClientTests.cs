@@ -237,7 +237,7 @@ namespace CloudBoilerplateNet.Tests
                 ExpirationScanFrequency = new TimeSpan(0, 0, 5)
             });
 
-            var cacheManager = new ReactiveCacheManager(projectOptions, new MemoryCache(memoryCacheOptions), new DependentFormatResolver(), new WebhookListener());
+            var cacheManager = new ReactiveCacheManager(projectOptions, new MemoryCache(memoryCacheOptions), new DependentFormatResolver(), new WebhookListener(), new ConsecutiveNotificationComparer());
 
             return new CachedDeliveryClient(projectOptions, cacheManager
                 , DeliveryClientBuilder.WithOptions(o => deliveryOptions).WithCodeFirstTypeProvider(new Models.CustomTypeProvider()).WithHttpClient(httpClient).Build());

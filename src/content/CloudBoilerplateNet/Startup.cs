@@ -44,7 +44,8 @@ namespace CloudBoilerplateNet
                 sp.GetRequiredService<IOptions<ProjectOptions>>(),
                 sp.GetRequiredService<IMemoryCache>(),
                 sp.GetRequiredService<IDependentTypesResolver>(),
-                sp.GetRequiredService<IWebhookListener>()));
+                sp.GetRequiredService<IWebhookListener>(),
+                new ConsecutiveNotificationComparer()));
             services.AddScoped<KenticoCloudSignatureActionFilter>();
 
             services.AddSingleton<IDeliveryClient>(sp => new CachedDeliveryClient(

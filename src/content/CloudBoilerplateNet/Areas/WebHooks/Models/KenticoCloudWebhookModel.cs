@@ -32,6 +32,12 @@ namespace CloudBoilerplateNet.Areas.WebHooks.Models
 
         [JsonProperty("project_id")]
         public Guid ProjectId { get; set; }
+
+        [JsonProperty("webhook_url")]
+        public string WebhookUrl { get; set; }
+
+        [JsonProperty("created_timestamp")]
+        public DateTime CreatedTimestamp { get; set; }
     }
 
     public class Data

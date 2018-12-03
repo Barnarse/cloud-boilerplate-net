@@ -8,7 +8,7 @@ namespace CloudBoilerplateNet.Helpers
     {
         public event EventHandler<WebhookNotificationEventArgs> WebhookNotification = delegate { };
 
-        public void RaiseWebhookNotification(object sender, string operation, IdentifierSet identifierSet)
+        public void RaiseWebhookNotification(object sender, string operation, IdentifierSet identifierSet, DateTime createdTimestamp)
         {
             if (sender == null)
             {
@@ -25,7 +25,7 @@ namespace CloudBoilerplateNet.Helpers
                 throw new ArgumentNullException(nameof(identifierSet));
             }
 
-            WebhookNotification(sender, new WebhookNotificationEventArgs(identifierSet, operation));
+            WebhookNotification(sender, new WebhookNotificationEventArgs(identifierSet, operation, createdTimestamp));
         }
     }
 }
