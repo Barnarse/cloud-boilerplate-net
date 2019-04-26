@@ -1,0 +1,310 @@
+@model IEnumerable<CreditCard>
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "_Coles";
+}
+
+@await Html.PartialAsync("_Carousel")
+
+<!-- Body content -->
+<div class="body-wrap content">
+    <div style="display: none">
+        <div id="data_three" class="popup-content cards-popup">
+            <h3 class="text-center-s">Choose between three cards</h3>
+            <div class="popup-container" style="overflow:hidden">
+                <div class="popup-panel ">
+                    <div class="wysiwyg-content">
+                        <p class="text-center-m phone-hide">
+                            <img src='https://financialservices.coles.com.au/~/media/financial-services/images/generic/naf-card.png' alt='Coles No Annual Fee Mastercard' />
+                        </p>
+                        <h3 class="text-center-m">No annual fee</h3>
+                        <p class="text-center-m  ">
+                            <img src='https://financialservices.coles.com.au/~/media/financial-services/images/generic/naf-card.png' class='popup-panel__image-mobile' alt='Coles No Annual Fee Mastercard' />
+                        </p>
+                        <p class="text-center-m popup-panel__text">
+                            <a class="initnafcardbtn" target="_blank" data-clicktrack="naf_popup">
+                                <span class="btn banner-cta secondary-green">Get Started</span>
+                            </a>
+                            <a href="https://financialservices.coles.com.au/credit-cards/no-annual-fee-mastercard">
+                                <span class="banner-link-copy">
+                                > Find out more
+                            </span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                <div class="popup-panel ">
+                    <div class="wysiwyg-content">
+                        <p class="text-center-m phone-hide">
+                            <img src='https://financialservices.coles.com.au/~/media/financial-services/images/generic/rewards-mcd_old.png' alt='Coles Rewards Mastercard' />
+                        </p>
+                        <h3 class="text-center-m">Faster rewards</h3>
+                        <p class="text-center-m  ">
+                            <img src='https://financialservices.coles.com.au/~/media/financial-services/images/generic/rewards-mcd_old.png' class='popup-panel__image-mobile' alt='Coles Rewards Mastercard' />
+                        </p>
+                        <p class="text-center-m popup-panel__text">
+                            <a class="initrewardscardbtn" data-clicktrack="rewards_popup">
+                                <span class="btn banner-cta secondary-green">Get Started</span>
+                            </a>
+                            <a href="https://financialservices.coles.com.au/credit-cards/rewards-mastercard">
+                                <span class="banner-link-copy">> Find out more</span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                <div class="popup-panel ">
+                    <div class="wysiwyg-content">
+                        <p class="text-center-m phone-hide">
+                            <img src='https://financialservices.coles.com.au/~/media/financial-services/images/generic/low-rate-mc.png' alt='Low Rate Mastercard' />
+                        </p>
+                        <h3 class="text-center-m">Lowest rate</h3>
+                        <p class="text-center-m  ">
+                            <img src='https://financialservices.coles.com.au/~/media/financial-services/images/generic/low-rate-mc.png' class='popup-panel__image-mobile' alt='Low Rate Mastercard' />
+                        </p>
+                        <p class="text-center-m popup-panel__text">
+                            <a class="initlowratecolesmastercardbtn" target="_blank" data-clicktrack="lowrate_popup">
+                                <span class="btn banner-cta secondary-green ">Get Started</span>
+                            </a>
+                            <a href="https://financialservices.coles.com.au/credit-cards/low-rate-mastercard">
+                                <span class="banner-link-copy">> Find out more</span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center-s popup-compare-copy">
+                Not sure?
+                <a class="popup-compare-link" href="https://financialservices.coles.com.au/credit-cards/compare-our-cards" data-clicktrack="popup:compare">Compare our credit cards</a>
+            </p>
+        </div>
+    </div>
+    <div class="container-fluid content-row" style="background-color:#F4F4F4;">
+        <div class="row-fluid wrapper-content centre-content page-wrapper">
+            <div class="content-padding-mobile">
+                <div id="wysiwyg_db8bd2b9" class="wysiwyg-content">
+                    <h2 class="section-title text-center-s">Choose the card that's right for you.</h2>
+                </div>
+                <div id="wysiwyg_a5fa3a7e" class="wysiwyg-content">
+
+                </div>
+
+                <div class="cc-module">
+                @Html.DisplayForModel()
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid content-row" style="background-color:#FFFFFF;">
+        <div class="row-fluid wrapper-content centre-content page-wrapper">
+
+            <div id="crosssell_(53e88f62)" class="row-fluid">
+                <!-- Left content -->
+                <div class="span3">
+                    <div class="wysiwyg-content">
+                        <p style="text-align: center;">
+                            <img alt="" src="https://financialservices.coles.com.au/~/media/financial-services/images/generic/velocity-travel.png?la=en"></p>
+                    </div>
+                </div>
+                <!-- // Left content -->
+
+                <!-- Right content -->
+                <div class="span9">
+                    <div class="wysiwyg-content">
+                        <div class="show-desktop">
+                            <h3>Now you can fly faster with a Coles Rewards Mastercard</h3>
+                            <p>With a Coles Rewards Mastercard you'll collect <strong>2 flybuys points</strong> per $1 on eligible spend<strong></strong>.<sup>#</sup> Turn those flybuys points into Velocity Frequent Flyer Points to fly even sooner.<sup>~</sup> <a href="/credit-cards/about-our-credit-cards/flybuys#flybuys-travel">Find out more</a></p>
+                        </div>
+                        <div class="show-mobile" style="text-align: center;">
+                            <h3>Now you can fly faster with a Coles Rewards Mastercard</h3>
+                            <p>With a Coles Rewards Mastercard you'll collect <strong>2 flybuys points</strong> per $1 on eligible spend<strong></strong>.<sup>#</sup> Turn those flybuys points into Velocity Frequent Flyer Points to fly even sooner.<sup>~</sup> <a href="/credit-cards/about-our-credit-cards/flybuys#flybuys-travel">Find out more</a></p>
+                        </div>
+                    </div>
+                </div>
+                <!--// Right content -->
+            </div>
+        </div>
+    </div>
+
+    <div style="display: none">
+        <div id="data_two" class="popup-content policyholder-popup">
+            <h3 class="text-center-s">Choose between two cards</h3>
+            <div class="popup-container" style="overflow:hidden">
+                <div class="popup-panel ">
+                    <div class="wysiwyg-content">
+                        <p class="text-center-m phone-hide">
+                            <img src='https://financialservices.coles.com.au/~/media/financial-services/images/generic/naf-card.png' alt='Coles No Annual Fee Mastercard' />
+                        </p>
+                        <h3 class="text-center-m">No annual fee</h3>
+                        <p class="text-center-m  ">
+                            <img src='https://financialservices.coles.com.au/~/media/financial-services/images/generic/naf-card.png' class='popup-panel__image-mobile' alt='Coles No Annual Fee Mastercard' />
+                        </p>
+                        <p class="text-center-m popup-panel__text">
+                            <a class="initnafcardbtn" target="_blank" data-clicktrack="naf_popup">
+                                <span class="btn banner-cta secondary-green">Get Started</span>
+                            </a>
+                            <a href="https://financialservices.coles.com.au/credit-cards/no-annual-fee-mastercard">
+                                <span class="banner-link-copy">
+                                > Find out more
+                            </span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                <div class="popup-panel ">
+                    <div class="wysiwyg-content">
+                        <p class="text-center-m phone-hide">
+                            <img src='https://financialservices.coles.com.au/~/media/financial-services/images/generic/low-rate-mc.png' alt='Low Rate Mastercard' />
+                        </p>
+                        <h3 class="text-center-m">Lowest rate</h3>
+                        <p class="text-center-m  ">
+                            <img src='https://financialservices.coles.com.au/~/media/financial-services/images/generic/low-rate-mc.png' class='popup-panel__image-mobile' alt='Low Rate Mastercard' />
+                        </p>
+                        <p class="text-center-m popup-panel__text">
+                            <a class="initlowratecolesmastercardbtn" target="_blank" data-clicktrack="lowrate_popup">
+                                <span class="btn banner-cta secondary-green ">Get Started</span>
+                            </a>
+                            <a href="https://financialservices.coles.com.au/credit-cards/low-rate-mastercard">
+                                <span class="banner-link-copy">> Find out more</span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center-s popup-compare-copy">
+                Not sure?
+                <a class="popup-compare-link" href="https://financialservices.coles.com.au/credit-cards/compare-our-cards" data-clicktrack="popup:compare">Compare our credit cards</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="container-fluid content-row wb_cc_slick" style="background-color: #F4F4F4;">
+        <div class="row-fluid wrapper-content page-wrapper">
+            <div class="content-padding content-padding-mobile">
+                <h2 class="section-title section-title__alternate text-center-s">6 more reasons to choose a Coles Credit Card</h2>
+                <div class="threeColumnWrapper grid-carousel row-fluid">
+                    <div class="span4">
+                        <div class="benefits-item text-center-s">
+                            <div class="benefits-item__container">
+                                <img src='https://financialservices.coles.com.au/~/media/financial-services/images/credit-cards/credit-cards-affiliates/the-coles-difference/thumb_faster-fly-buy.png' class='benefits-item__icon' alt='faster fly buy' />
+                            </div>
+                            <div class="benefits-item__content">
+                                <p class="benefits-item__desc">
+                                    Collect up to 6x more points on all Coles
+                                    <br class="only-for-desktop"> Supermarket shops when you take up a Coles
+                                    <br class="only-for-desktop"> Credit Card and Coles Insurance policies.<sup>2</sup>
+                                </p>
+                                <p class="benefits-item__desc pre">
+                                    <a href='/flybuys-fasttrack' class='benefits-item__icon'>Find out more</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="benefits-item text-center-s">
+                            <div class="benefits-item__container">
+                                <img src='https://financialservices.coles.com.au/~/media/financial-services/images/flybuys/flybuys-velocity-cards-plane.png' class='benefits-item__icon' alt='flybuys velocity frequent flyer' />
+                            </div>
+                            <div class="benefits-item__content">
+                                <p class="benefits-item__desc">
+                                    Fly faster by converting your flybuys points to Velocity.<sup>~</sup>
+                                </p>
+                                <p class="benefits-item__desc pre">
+                                    <a href='https://financialservices.coles.com.au/credit-cards/about-our-credit-cards/flybuys#flybuys-travel' class='benefits-item__icon'>Find out more</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="benefits-item text-center-s">
+                            <div class="benefits-item__container">
+                                <img src='https://financialservices.coles.com.au/~/media/financial-services/images/banner-thumbnails/the-coles-difference/the-coles-difference-instant-10-dollars-131x131.png' class='benefits-item__icon' alt='Instant $10' />
+                            </div>
+                            <div class="benefits-item__content">
+                                <p class="benefits-item__desc">
+                                    As a Coles Credit Card customer you can take $10 off your Coles supermarket shop, instantly at the checkout, every time you redeem 2,000 flybuys points.<sup>1</sup>
+                                </p>
+                                <p class="benefits-item__desc pre">
+                                    <a href='/credit-cards/10-off' class='benefits-item__icon'>Find out more</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="benefits-item text-center-s">
+                            <div class="benefits-item__container">
+                                <img src='https://financialservices.coles.com.au/~/media/financial-services/images/credit-cards/credit-cards-affiliates/spider-carousel/thumb_shield.png' class='benefits-item__icon' alt='Coles Shield' />
+                            </div>
+                            <div class="benefits-item__content">
+                                <p class="benefits-item__desc">
+                                    Three layers of theft and fraud
+                                    <br/>protection with the Coles Shield.
+
+                                </p>
+                                <p class="benefits-item__desc pre">
+                                    <a href='/credit-cards/about-our-credit-cards/card-security-and-protection' class='benefits-item__icon'>Find out more</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="benefits-item text-center-s">
+                            <div class="benefits-item__container">
+                                <img src='https://financialservices.coles.com.au/~/media/financial-services/images/credit-cards/credit-cards-affiliates/spider-carousel/thumb_coles-wallet.png' class='benefits-item__icon' alt='Coles Mobile Wallet' />
+                            </div>
+                            <div class="benefits-item__content">
+                                <p class="benefits-item__desc">
+                                    The Coles Mobile Wallet App lets you view and activate flybuys offers with your phone, while keeping track of your purchases for your convenience and control.
+                                </p>
+                                <p class="benefits-item__desc pre">
+                                    <a href='/credit-cards/coles-mobile-wallet' class='benefits-item__icon'>Find out more</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="benefits-item text-center-s">
+                            <div class="benefits-item__container">
+                                <img src='https://financialservices.coles.com.au/~/media/financial-services/images/credit-cards/credit-cards-affiliates/spider-carousel/thumb_flybuys.png' class='benefits-item__icon' alt='fly buy' />
+                            </div>
+                            <div class="benefits-item__content">
+                                <p class="benefits-item__desc">
+                                    Enjoy all the convenience of your
+                                    <br> Coles Credit Card and flybuys card in one.
+                                </p>
+                                <p class="benefits-item__desc pre">
+                                    <a href='/credit-cards/about-our-credit-cards/flybuys' class='benefits-item__icon'>Find out more</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid content-row" style="background-color:#fff;">
+        <div class="row-fluid wrapper-content centre-content page-wrapper">
+            <div id="wysiwyg_637f9819" class="wysiwyg-content">
+                <h3 style="text-align: center;">Terms &amp; conditions</h3>
+                <p class="fineprint"><sup>*</sup>New customers who apply for a Coles Mastercard by Sun 30 June 2019 and make a purchase (excludes Cash Advances) within the first 30 days of the Account approval date, will receive $100 off a single Coles Supermarket shop. $100 off will be activated on your flybuys account and available for use within 3 weeks of your first purchase. $100 off can only be activated on the flybuys account quoted in the application process. To redeem the $100 off, you must scan your flybuys barcode and spend a minimum of $100.05 after savings and discounts in one transaction at Coles Supermarkets (excluding gift cards, iTunes cards, tobacco and tobacco related purchases. $100 off can only be used once. Excludes Coles Express and Coles Online.
+                </p>
+                <p class="fineprint"><sup>#</sup>flybuys points awarded for using a Coles Mastercard linked to your flybuys membership are in addition to flybuys points awarded by flybuys partners. The number of flybuys points awarded is calculated by reference to the Australian dollar amount of the transaction. flybuys points will be allocated by flybuys in accordance with the flybuys terms and conditions. For No Annual Fee and Rewards credit cards, points are earned on Eligible Transactions. For the Low Rate credit card, points are earned on Coles Spend. Both Eligible Transactions and Coles Spend are defined in <a href="https://www.coles.com.au/rewards-mastercard/terms-conditions">www.coles.com.au/rewards-mastercard/terms-conditions</a>. For the avoidance of doubt Low Rate Card purchases at Coles Supermarkets will earn points. Standard flybuys Terms and Conditions apply, see <a href="https://www.flybuys.com.au" target="_blank">flybuys.com.au</a>. Note that partners&rsquo; earn rates vary.</p>
+                <p class="fineprint"><sup>~</sup>Velocity Frequent Flyer members must link their Velocity membership to their flybuys household to enable the transfer of their flybuys points to Velocity Points. Linked households may transfer a minimum of 2,000 flybuys points (equivalent to 870 Velocity Frequent Flyer Points) per redemption and a maximum of 138,000 flybuys points (equivalent to 60,030 Velocity Frequent Flyer Points) for Velocity Frequent Flyer Points per household, per calendar year. flybuys points can only be transferred in increments of 2,000. Visit at <a href="https://www.flybuys.com.au" target="_blank">www.flybuys.com.au/</a> to transfer flybuys points. flybuys points transferred for Velocity Frequent Flyer points will be credited to the linked Velocity accounts. Standard flybuys Terms and Conditions apply to the collection of flybuys points available at&nbsp;<a href="https://www.flybuys.com.au/about/#/flybuys-terms-and-conditions" target="_blank">www.flybuys.com.au/about/ flybuys-terms-and-conditions</a>. Standard Velocity Frequent Flyer Terms and Conditions available at <a href="https://www.velocityfrequentflyer.com/content/TermsConditions/" target="_blank">www.velocityfrequentflyer.com/content/TermsConditions/</a> apply once points are transferred to Velocity Frequent Flyer. To earn and redeem Velocity Points you must be a Velocity member. Velocity membership and Points earn and redemption are subject to the Terms and Conditions, as amended from time to time. flybuys points awarded for using a Coles Mastercard linked to your flybuys membership are in addition.</p>
+                <p class="fineprint"><sup></sup>Your total Balance Transfers may not exceed 80% of your Credit Limit. The 0% p.a. interest rate applies to balances transferred with this offer for a period of 6 months. The 6 months promotional period commences when the Balance Transfer is processed. At the end of the Balance Transfer period, the interest rate on any outstanding transferred balance will revert to the variable Annual Percentage Rate for Cash Advances, currently 19.99% p.a. Please note you are not entitled to any interest free days to Retail Purchases whilst you have a Balance Transfer. This means that all spend will be charged interest at the applicable Annual Percentage Rate. This offer is valid until 31 March 2019. Post this advertised date; Citi reserves the right to continue, withdraw or change the offer at any time without notice.</p>
+                <p class="fineprint">
+                    This material has been prepared by Citigroup Pty Limited ABN 88 004 325 080 AFSL No. 238098 Australian credit licence 238098 and not Velocity Frequent Flyer. Velocity does not hold an Australian Credit Licence and is not the licensee in relation to the credit activity being engaged in be Citigroup who is the credit licensee.</p>
+                <p class="fineprint">Mastercard is a registered trademark and the circles design is a trademark of Mastercard International Incorporated. Coles unsecured credit products are issued by Citigroup Pty Limited ABN 88 004 325 080 AFSL No. 238098 Australian credit licence 238098 and distributed by Coles Supermarkets Australia Pty Ltd ABN 45 004 189 708. Coles receives commission for the introduction of credit business to Citigroup.
+                </p>
+                <p class="fineprint"><sup>^</sup>New customers only. The standard interest rate of 19.99% p.a. applies to cash advances.</p>
+                <p class="fineprint"><sup>1</sup>2,000 flybuys points are required to redeem $10 off at the checkout each time. Excludes Coles Express and Coles online. Minimum spend is $10.05 after savings and discounts in one transaction at Coles Supermarkets and BI-LO (excluding smoking/tobacco related product purchases and all gift cards).
+                </p>
+                <p class="fineprint"><sup>2</sup>flybuys points are only earned on Eligible Transactions and defined in the <a href="https://financialservices.coles.com.au/~/media/financial-services/files/creditcards/novation/coles-mastercard-rewards-terms-and-conditions.pdf">Coles Mastercard Rewards Terms and Conditions</a>. Standard flybuys Terms and Conditions apply. See <a href="https://www.flybuys.com.au" target="_blank">flybuys.com.au</a>.</p>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<!--// Body content -->
+</div>

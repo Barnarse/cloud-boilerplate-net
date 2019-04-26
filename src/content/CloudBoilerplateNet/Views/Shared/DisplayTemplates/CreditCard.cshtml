@@ -1,0 +1,43 @@
+﻿@using CloudBoilerplateNet.Helpers.Extensions
+@model CreditCard
+
+@{
+    Layout = null;
+}
+
+<div class="span4">
+    <div class="cc-module__item">
+        @Html.AssetImage(@Model.HeroImage.First(), title: @Model.HeroImage.First().Name)     
+        <div class="text-center-s">
+            <p class="cc-module__heading">@Model.ShortTagline</p>
+            <p class="cc-module__sub"><strong>@Model.LongTagLine</strong></p>
+            <div class="cc-module__info">
+                <div class="cc-module__infoleft">
+                    <p>Annual fee</p>
+                    <p>Purchase interest rate:</p>
+                    <p>flybuys points:</p>
+                </div>
+            </div>
+            <div class="cc-module__info">
+                <div class="cc-module__inforight">
+                    <p>$@Model.AnnualFee</p>
+                    <p>@Model.PurchaseInterestRate% p.a.</p>
+                    <p class="cc-module__margin">@Model.FlybuysPoints<sup>#</sup></p>
+                </div>
+            </div>
+            @if(Model.Offers.Any()){
+                var offer = Model.Offers.First();
+            <div class="cc-module__greybox text-center-s">
+                <p class="coles-offer__rate">@offer.Title<sup></sup></p>
+                <p class="coles-offer__copy" style="padding-bottom: 15px;">@offer.Description<sup>*</sup>
+                </p>
+            </div>}
+            <div class="block-wrapper">
+                <a tabindex="0" class="btn secondary-green initnafcardbtn" data-clicktrack="naf_producttable">Get Started</a>
+            </div>
+            <div class="block-wrapper">
+                <p class="pre"><a class="cc-module__link" href="/credit-cards/@Model.Url">&gt; Find out more</a></p>
+            </div>
+        </div>
+    </div>
+</div>

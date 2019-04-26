@@ -10,7 +10,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/src/content/CloudBoilerplateNet/bin/Debug/netcoreapp2.0/CloudBoilerplateNet.dll",
+            "program": "${workspaceFolder}/src/content/CloudBoilerplateNet/bin/Debug/netcoreapp2.2/CloudBoilerplateNet.dll",
             "args": [],
             "cwd": "${workspaceFolder}/src/content/CloudBoilerplateNet",
             "stopAtEntry": false,
